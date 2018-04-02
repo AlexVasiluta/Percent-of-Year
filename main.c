@@ -16,7 +16,7 @@ int main()
          month = atoi(ms), 
          year = atoi(ys), 
          totaldays = 365,
-         months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+         months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, i = 0;
     bool leapyear = false;
     
     if((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0))
@@ -25,7 +25,7 @@ int main()
         totaldays = 366;
     }
     
-    for(int i = 0; i < month - 1; i++)
+    for(i = 0; i < month - 1; i++)
     {
         dayselapsed += months[i];
         if(i == 1 && leapyear == 1)
